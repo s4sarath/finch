@@ -132,9 +132,11 @@
 #### Knowledge Graph（知识图谱）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/kg.png" height='150'>
 
-* [Notes](https://github.com/zhedongzheng/finch/blob/master/notes/kg/notes.md)
+* [Notes](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/notes/kg/notes.ipynb)
 
 * Knowledge Representation（知识表示）
+
+    * DistMult
 
 #### TensorFlow Detail（TensorFlow 细节）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/tf.png" height='150'>
