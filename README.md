@@ -24,9 +24,9 @@
 * Python 3 and [Jupyter Notebook](http://jupyter.org/) are required
 
     ```
-    (CPU User) $ pip3 install tensorflow sklearn scipy bunch tqdm
+    (CPU User) $ pip3 install tensorflow sklearn scipy bunch tqdm wget
     
-    (GPU User) $ pip3 install tensorflow-gpu sklearn scipy bunch tqdm
+    (GPU User) $ pip3 install tensorflow-gpu sklearn scipy bunch tqdm wget
     ```
 ---
 
@@ -82,13 +82,9 @@
 #### Text Matching（文本匹配）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/decoration_10.jpeg" height='200'>
 
-* Movielens（电影推荐）
-
-    * User-Item Matching &nbsp; &nbsp; [Folder](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/movielens)
+* User-Item Matching &nbsp; &nbsp; [Folder](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/movielens)
     
-* Question Matching (问题匹配)
-
-    * [Competition](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/competition/ppdai)
+* Question Matching &nbsp; &nbsp; [Folder](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/competition/ppdai)
 
 #### Sequence Labelling（序列标记）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/decoration_4.jpg" height='100'>
@@ -123,7 +119,7 @@
 #### Question Answering（问题回答）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/dmn-details.png" height='100'>
 
-* Facebook bAbI（逻辑回答）
+* Memory Network（记忆网络）
 
     *  End-to-End Memory Network &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/nlp-models/tensorflow/end2end_mn/train.ipynb)
 

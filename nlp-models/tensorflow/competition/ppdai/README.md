@@ -1,4 +1,4 @@
-[This competition](https://ai.ppdai.com/mirror/goToMirrorDetail?mirrorId=1)
+[Download Data](https://pan.baidu.com/s/1uXY2oY5s_EFSuQEznbvmBQ)
 
 ```
 ├── configs
