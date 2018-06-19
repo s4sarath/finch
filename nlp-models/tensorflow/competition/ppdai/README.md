@@ -6,13 +6,18 @@
 │
 ├── data               
 │   └── dataloaders
-│   	 └── dataloader_char_rnn
-│   	 └── dataloader_word_fixed
-│   	 └── dataloader_word_rnn
-│   	 └── preprocess_char_rnn
-│   	 └── preprocess_word_fixed
-│   	 └── preprocess_word_rnn
+│   	 └── dataloader_char_rnn.py
+│   	 └── dataloader_word_fixed.py
+│   	 └── dataloader_word_rnn.py
+│   	 └── preprocess_char_rnn.py
+│   	 └── preprocess_word_fixed.py
+│   	 └── preprocess_word_rnn.py
 │   └── files_original
+│   	 └── char_embed.txt        # download and place here
+│   	 └── question.csv          # download and place here
+│   	 └── test.csv              # download and place here
+│   	 └── train.csv             # download and place here
+│   	 └── word_embed.txt        # download and place here
 │   └── files_processed
 │   └── notebooks
 │   └── tfrecords
@@ -21,7 +26,7 @@
 │   └── example.py
 │   
 ├── mains              
-│   └── train_word_siamese_rnn.py  
+│   └── train_word_siamese_rnn.py  # run this
 │  
 └── model  
     └── siamese_rnn.py
