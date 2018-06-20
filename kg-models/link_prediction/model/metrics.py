@@ -1,3 +1,4 @@
+from tqdm import tqdm
 import tensorflow as tf
 import numpy as np
 import time
@@ -63,14 +64,14 @@ def obj_input_fn(eval_triples,
     return {'s': s, 'p': p, 'o': o}
 
 
-def evaluate(model,
-             valid_triples,
-             test_triples,
-             all_triples,
-             entity_to_idx,
-             predicate_to_idx,
-             nb_entities,
-             batch_size):
+def evaluate_rank(model,
+                  valid_triples,
+                  test_triples,
+                  all_triples,
+                  entity_to_idx,
+                  predicate_to_idx,
+                  nb_entities,
+                  batch_size):
 
     for eval_name, eval_triples in [('valid', valid_triples), ('test', test_triples)]:
         
@@ -98,13 +99,15 @@ def evaluate(model,
         ranks_subj, ranks_obj = [], []
         filtered_ranks_subj, filtered_ranks_obj = [], []
 
-        for _i, ((s, p, o), scores_subj, scores_obj) in enumerate(zip(eval_triples,
-                                                                      Scores_subj,
-                                                                      Scores_obj)):
+        for _i, ((s, p, o), scores_subj, scores_obj) in tqdm(enumerate(zip(eval_triples,
+                                                                           Scores_subj,
+                                                                           Scores_obj)),
+                                                             total=len(eval_triples),
+                                                             ncols=70):
             s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
 
-            ranks_subj += [1 + np.sum(scores_subj > scores_subj[s_idx])]
-            ranks_obj += [1 + np.sum(scores_obj > scores_obj[o_idx])]
+            ranks_subj += [1 + np.argsort(np.argsort(- scores_subj))[s_idx]]
+            ranks_obj += [1 + np.argsort(np.argsort(- scores_obj))[o_idx]]
 
             filtered_scores_subj = scores_subj.copy()
             filtered_scores_obj = scores_obj.copy()
@@ -115,8 +118,8 @@ def evaluate(model,
             filtered_scores_subj[rm_idx_s] = - np.inf
             filtered_scores_obj[rm_idx_o] = - np.inf
 
-            filtered_ranks_subj += [1 + np.sum(filtered_scores_subj > filtered_scores_subj[s_idx])]
-            filtered_ranks_obj += [1 + np.sum(filtered_scores_obj > filtered_scores_obj[o_idx])]
+            filtered_ranks_subj += [1 + np.argsort(np.argsort(- filtered_scores_subj))[s_idx]]
+            filtered_ranks_obj += [1 + np.argsort(np.argsort(- filtered_scores_obj))[o_idx]]
 
         ranks = ranks_subj + ranks_obj
         filtered_ranks = filtered_ranks_subj + filtered_ranks_obj
