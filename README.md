@@ -126,7 +126,7 @@
     *  Dynamic Memory Network &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/nlp-models/tensorflow/dmn/train.ipynb)
 
 #### Knowledge Graph（知识图谱）
-<img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/kg.png" height='150'>
+<img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/kg.png" height='130'>
 
 * [Notes](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/notes/kg/notes.ipynb)
 
@@ -135,7 +135,7 @@
     * DistMult &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/link_prediction/tests/wn18_distmult.ipynb)
 
 #### TensorFlow Detail（TensorFlow 细节）
-<img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/tf.png" height='150'>
+<img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/tf.png" height='130'>
 
 * Loading Data (导入数据)
 
