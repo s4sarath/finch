@@ -7,6 +7,8 @@
 
 * produces lots of clean Notebooks to make life easy;
 
+* can be tested with CPU;
+
 ---
 #### Contents
 * [Word Embedding（词向量）](https://github.com/zhedongzheng/finch#word-embedding%E8%AF%8D%E5%90%91%E9%87%8F)
