@@ -71,7 +71,7 @@
 
     * Self-Attention LM &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/nlp-models/tensorflow/tf-data-api/self_attn_lm_test.ipynb)
 
-* Deep Generative（深度生成）
+* Variational Autoencoder（变分自编码器）
 
     * VAE (RNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train.ipynb)
 
