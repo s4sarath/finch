@@ -8,7 +8,7 @@ def subj_next_batch(eval_triples,
                     entity_to_idx,
                     predicate_to_idx,
                     nb_entities):
-    for _i, (s, p, o) in enumerate(eval_triples):
+    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70):
         s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
         xs = np.arange(nb_entities)
         xp = np.full(shape=(nb_entities,), fill_value=p_idx, dtype=np.int32)
@@ -20,7 +20,7 @@ def obj_next_batch(eval_triples,
                    entity_to_idx, 
                    predicate_to_idx,
                    nb_entities):
-    for _i, (s, p, o) in enumerate(eval_triples):
+    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70):
         s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
         xs = np.full(shape=(nb_entities,), fill_value=s_idx, dtype=np.int32)
         xp = np.full(shape=(nb_entities,), fill_value=p_idx, dtype=np.int32)
