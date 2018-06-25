@@ -9,7 +9,7 @@ def s_next_batch(eval_triples,
                  predicate_to_idx,
                  nb_entities,
                  batch_size):
-    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70):
+    for _i, (s, p, o) in enumerate(eval_triples):
         s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
         xs = np.arange(nb_entities)
         xp = np.full(shape=(nb_entities,), fill_value=p_idx, dtype=np.int32)
@@ -23,7 +23,7 @@ def o_next_batch(eval_triples,
                    predicate_to_idx,
                    nb_entities,
                    batch_size):
-    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70):
+    for _i, (s, p, o) in enumerate(eval_triples):
         s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
         xs = np.full(shape=(nb_entities,), fill_value=s_idx, dtype=np.int32)
         xp = np.full(shape=(nb_entities,), fill_value=p_idx, dtype=np.int32)
@@ -107,11 +107,9 @@ def evaluate_rank(model,
         ranks_s, ranks_o = [], []
         filtered_ranks_s, filtered_ranks_o = [], []
 
-        for _i, ((s, p, o), scores_s, scores_o) in tqdm(enumerate(zip(eval_triples,
-                                                                      ScoresS,
-                                                                      ScoresO)),
-                                                        total=len(eval_triples),
-                                                        ncols=70):
+        for _i, ((s, p, o), scores_s, scores_o) in enumerate(zip(eval_triples,
+                                                                 ScoresS,
+                                                                 ScoresO)):
             s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
 
             ranks_s += [1 + np.argsort(np.argsort(- scores_s))[s_idx]]
