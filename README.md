@@ -120,6 +120,8 @@
 
     * VAE (Self-Attention) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_attn.ipynb)
 
+* Learning to Control Reconstruct（定向重建句子）
+
     * VAE + Discriminator &nbsp; &nbsp; [Folder](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/toward_control)
         
 #### Question Answering（问题回答）
