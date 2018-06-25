@@ -71,16 +71,6 @@
 
     * Self-Attention LM &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/nlp-models/tensorflow/tf-data-api/self_attn_lm_test.ipynb)
 
-* Variational Autoencoder（变分自编码器）
-
-    * VAE (RNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train.ipynb)
-
-    * VAE (Dilated-CNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_cnn.ipynb)
-
-    * VAE (Self-Attention) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_attn.ipynb)
-
-    * VAE + Discriminator &nbsp; &nbsp; [Folder](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/toward_control)
-
 * Speech Recognition（语音识别）
 
     * CTC &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/nlp-models/tensorflow/asr/train.ipynb)
@@ -121,6 +111,16 @@
 * Learning to Dialog（机器对话）
 
     * Transformer &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/nlp-models/tensorflow/attn_is_all_u_need/train_dialog.ipynb)
+    
+* Variational Autoencoder（变分自编码器）
+
+    * VAE (RNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train.ipynb)
+
+    * VAE (Dilated-CNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_cnn.ipynb)
+
+    * VAE (Self-Attention) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_attn.ipynb)
+
+    * VAE + Discriminator &nbsp; &nbsp; [Folder](https://github.com/zhedongzheng/finch/tree/master/nlp-models/tensorflow/toward_control)
         
 #### Question Answering（问题回答）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/dmn-details.png" height='100'>
