@@ -7,7 +7,7 @@
 
 * produces lots of clean Notebooks to make life easy;
 
-* can be tested with CPU;
+* can be run on CPU in reasonable time;
 
 ---
 #### Contents
