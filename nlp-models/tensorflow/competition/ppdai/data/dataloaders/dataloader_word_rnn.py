@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from configs.rnn_config import args
+from configs.general import args
 from .preprocess_word_rnn import PreProcessor
 
 

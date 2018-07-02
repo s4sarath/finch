@@ -1,5 +1,5 @@
 from tqdm import tqdm
-from configs.rnn_config import args
+from configs.general import args
 
 import tensorflow as tf
 import numpy as np

@@ -9,13 +9,13 @@ import os, sys
 sys.path.append(os.path.dirname(os.getcwd()))
 
 from log import create_logging
-from configs.rnn_config import args
+from configs.general import args
 from data.dataloaders.dataloader_word_rnn import DataLoader
-from model.word_siamese_rnn import model_fn
+from model.baseline import model_fn
 
 
-MODEL_PATH = '../model/word_siamese_rnn_ckpt'
-SUBMIT_PATH = './submit_word_siamese_rnn.csv'
+MODEL_PATH = '../model/baseline_word_ckpt'
+SUBMIT_PATH = './submit_baseline_word.csv'
 
 
 def get_val_labels():
