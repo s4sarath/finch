@@ -2,7 +2,7 @@
 
 ```
 ├── configs
-│   └── rnn_config.py   
+│   └── general.py   
 │
 ├── data               
 │   └── dataloaders
@@ -26,8 +26,8 @@
 │   └── example.py
 │   
 ├── mains              
-│   └── train_word_siamese_rnn.py  # run this
+│   └── train_baseline_word.py     # run this to train model
 │  
 └── model  
-    └── siamese_rnn.py
+    └── baseline.py
 ```
