@@ -24,6 +24,7 @@
 │
 ├── log             
 │   └── example.py
+│   └── 2018-07-02 06:22:36.log
 │   
 ├── mains              
 │   └── train_baseline_word.py     # run this to train model
