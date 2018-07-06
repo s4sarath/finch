@@ -116,7 +116,7 @@
 
     * VAE (RNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train.ipynb)
 
-        * Using [tf.distributions](https://www.tensorflow.org/api_docs/python/tf/distributions) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_tfd.ipynb)
+        * Using &nbsp; tf.distributions &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_tfd.ipynb)
 
     * VAE (Dilated-CNN) &nbsp; &nbsp; [Notebook](https://nbviewer.jupyter.org/github/zhedongzheng/finch/tree/master/nlp-models/tensorflow/vae/train_cnn.ipynb)
 
