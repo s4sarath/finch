@@ -26,9 +26,9 @@
 * Python 3 and [Jupyter Notebook](http://jupyter.org/) are required
 
     ```
-    (CPU User) $ pip3 install tensorflow sklearn scipy bunch tqdm wget rdflib
+    (CPU User) $ pip3 install tensorflow sklearn scipy bunch tqdm wget
     
-    (GPU User) $ pip3 install tensorflow-gpu sklearn scipy bunch tqdm wget rdflib
+    (GPU User) $ pip3 install tensorflow-gpu sklearn scipy bunch tqdm wget
     ```
 ---
 
