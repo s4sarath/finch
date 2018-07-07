@@ -26,9 +26,9 @@
 * Python 3 and [Jupyter Notebook](http://jupyter.org/) are required
 
     ```
-    (CPU User) $ pip3 install tensorflow sklearn scipy bunch tqdm wget
+    (CPU User) $ pip3 install tensorflow sklearn scipy bunch tqdm wget rdflib
     
-    (GPU User) $ pip3 install tensorflow-gpu sklearn scipy bunch tqdm wget
+    (GPU User) $ pip3 install tensorflow-gpu sklearn scipy bunch tqdm wget rdflib
     ```
 ---
 
@@ -141,8 +141,6 @@
 * [Notes](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/notes/kg/notes.ipynb)
 
 * Knowledge Representation（知识表示）
-
-    ``` pip3 install rdflib ```
 
     * RDF + SPARQL &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/link_prediction/tests/wn18_rdf.ipynb)
 
