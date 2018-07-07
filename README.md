@@ -142,7 +142,7 @@
 
 * Knowledge Representation（知识表示）
 
-    * RDF + SPARQL &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/link_prediction/tests/wn18_rdf.ipynb)
+    * RDF + SPARQL &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/knowledge_representation/wn18_rdf_sparql.ipynb)
 
 * Link Prediction（关系预测）
 
