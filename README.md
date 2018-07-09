@@ -146,9 +146,9 @@
 
     * RDF + SPARQL &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/knowledge_representation/tests/wn18_rdf_sparql.ipynb)
 
-* Link Prediction（关系预测）
+    * Link Prediction
 
-    * DistMult &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/link_prediction/tests/wn18_distmult.ipynb)
+        * DistMult &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/link_prediction/tests/wn18_distmult.ipynb)
 
 #### TensorFlow Detail（TensorFlow 细节）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/tf.png" height='130'>
