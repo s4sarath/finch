@@ -87,26 +87,22 @@ def evaluate_rank(model,
     #for eval_name, eval_triples in [('valid', valid_triples), ('test', test_triples)]:
     for eval_name, eval_triples in [('test', test_triples)]:
         
-        _scores_s = np.fromiter(model.predict(
+        _scores_s = list(model.predict(
             lambda: s_input_fn(eval_triples,
                                entity_to_idx, 
                                predicate_to_idx,
                                nb_entities,
-                               batch_size)),
-            dtype=np.float32,
-            count=len(eval_triples)*nb_entities)
+                               batch_size), yield_single_examples=False))
         
-        _scores_o = np.fromiter(model.predict(
+        _scores_o = list(model.predict(
             lambda: o_input_fn(eval_triples,
                                entity_to_idx, 
                                predicate_to_idx,
                                nb_entities,
-                               batch_size)),
-            dtype=np.float32,
-            count=len(eval_triples)*nb_entities)
+                               batch_size), yield_single_examples=False))
 
-        ScoresS = _scores_s.reshape([len(eval_triples), nb_entities])
-        ScoresO = _scores_o.reshape([len(eval_triples), nb_entities])
+        ScoresS = np.concatenate(_scores_s).reshape([len(eval_triples), nb_entities])
+        ScoresO = np.concatenate(_scores_o).reshape([len(eval_triples), nb_entities])
 
         ranks_s, ranks_o = [], []
         filtered_ranks_s, filtered_ranks_o = [], []
