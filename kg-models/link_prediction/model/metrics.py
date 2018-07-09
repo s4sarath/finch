@@ -2,7 +2,6 @@ from tqdm import tqdm
 import tensorflow as tf
 import numpy as np
 import time
-import sys
 
 
 def s_next_batch(eval_triples,
@@ -10,8 +9,7 @@ def s_next_batch(eval_triples,
                  predicate_to_idx,
                  nb_entities,
                  batch_size):
-    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70, 
-                              file=sys.stdout):
+    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70):
         s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
         xs = np.arange(nb_entities)
         xp = np.full(shape=(nb_entities,), fill_value=p_idx, dtype=np.int32)
@@ -25,8 +23,7 @@ def o_next_batch(eval_triples,
                  predicate_to_idx,
                  nb_entities,
                  batch_size):
-    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70,
-                              file=sys.stdout):
+    for _i, (s, p, o) in tqdm(enumerate(eval_triples), total=len(eval_triples), ncols=70):
         s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
         xs = np.full(shape=(nb_entities,), fill_value=s_idx, dtype=np.int32)
         xp = np.full(shape=(nb_entities,), fill_value=p_idx, dtype=np.int32)
@@ -84,8 +81,7 @@ def evaluate_rank(model,
                   nb_entities,
                   batch_size):
 
-    #for eval_name, eval_triples in [('valid', valid_triples), ('test', test_triples)]:
-    for eval_name, eval_triples in [('test', test_triples)]:
+    for eval_name, eval_triples in [('valid', valid_triples), ('test', test_triples)]:
         
         _scores_s = list(model.predict(
             lambda: s_input_fn(eval_triples,
@@ -111,8 +107,7 @@ def evaluate_rank(model,
                                                                       ScoresS,
                                                                       ScoresO)),
                                                         total=len(eval_triples),
-                                                        ncols=70,
-                                                        file=sys.stdout):
+                                                        ncols=70):
             s_idx, p_idx, o_idx = entity_to_idx[s], predicate_to_idx[p], entity_to_idx[o]
 
             ranks_s += [1 + np.argsort(np.argsort(- scores_s))[s_idx]]
