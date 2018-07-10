@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 import pprint
 
 
@@ -24,6 +25,7 @@ def model_fn(features, labels, mode, params):
     
     if mode == tf.estimator.ModeKeys.TRAIN:
         tf.logging.info('\n'+pprint.pformat(tf.trainable_variables()))
+        tf.logging.info('params: %d'%count_train_params())
         
         loss_op = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=logits,
                                                                          labels=labels))
@@ -37,3 +39,7 @@ def model_fn(features, labels, mode, params):
     
     if mode == tf.estimator.ModeKeys.PREDICT:
         return tf.estimator.EstimatorSpec(mode, predictions = tf.sigmoid(logits))
+
+
+def count_train_params():
+    return np.sum([np.prod([d.value for d in v.get_shape()]) for v in tf.trainable_variables()])
