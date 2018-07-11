@@ -140,8 +140,6 @@
 #### Knowledge Graph（知识图谱）
 <img src="https://github.com/zhedongzheng/finch/blob/master/nlp-models/assets/kg.png" height='130'>
 
-* [Notes](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/notes/kg/notes.ipynb)
-
 * Knowledge Representation（知识表示）
 
     * RDF + SPARQL &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/knowledge_representation/tests/wn18_rdf_sparql.ipynb)
