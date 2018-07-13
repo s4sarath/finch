@@ -144,7 +144,7 @@
 
     * RDF + SPARQL &nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/knowledge_representation/tests/wn18_rdf_sparql.ipynb)
 
-* Link Prediction
+* Knowledge Embedding (知识嵌入)
 
     * DistMult (1-1 Scoring)&nbsp; &nbsp; [Notebook (WN18)](https://nbviewer.jupyter.org/github/zhedongzheng/finch/blob/master/kg-models/link_prediction/main/wn18_distmult_1v1.ipynb)
 
